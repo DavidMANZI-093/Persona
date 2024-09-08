@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 62.5%;
+    font-size: 62.5%;
 }
 
 :root {
     --bg-main: #ffffff;
     --bg-sec: #f3f3f3;
+    --bg-ter: #cecece;
+    --fg-reg: #272727;
+    /* --fg-hg: #7925c7; */
+    /* --fg-hg: #02750b; */
+    --fg-hg: #0077ff;
 }
 
 body {
@@ -40,30 +45,86 @@ body {
     z-index: 2;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     transform: translateZ(1rem);
 }
 
 .placeholder {
     display: flex;
-    width: 8rem;
-    height: 8rem;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
     background-color: var(--bg-sec);
+    overflow: hidden;
 }
 
+/* -- The loading ghost -- */
+
+.ghost {
+    position: relative;
+    display: flex;
+    background-color: #000;
+    height: 120%;
+    width: 60%;
+    transform: rotate(15deg);
+    background: linear-gradient(90deg, var(--bg-sec), var(--bg-ter), var(--bg-sec));
+    animation: ghost 1s ease infinite;
+}
+
+@keyframes ghost {
+    0% {
+        left: -60%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* -- EOS -- */
+
 .progress-bar {
-    width: 24rem;
+    width: 40rem;
     height: 0.4rem;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
     overflow: hidden;
     background-color: var(--bg-sec);
 }
 
+/* -- The progress bar -- */
+
 .progress {
     position: relative;
     display: flex;
-    width: 10%;
+    width: 0;
     height: 100%;
-    background-color: #8a2be2;
+    border-radius: 0.4rem;
+    background-color: var(--fg-hg);
+    animation: progress 2s linear 1s 1;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* -- EOS -- */
+
+.logo-text h1 {
+    font-size: 3rem;
+    letter-spacing: 0.02rem;
+    color: var(--fg-reg);
+}
+
+.logo-text h1 em {
+    color: var(--fg-hg);
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
 }
