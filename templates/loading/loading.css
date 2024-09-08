@@ -45,22 +45,34 @@ body {
     z-index: 2;
     align-items: center;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
     transform: translateZ(1rem);
 }
 
-.placeholder {position: relative;
+.logo {
+    position: relative;
     display: flex;
     align-items: center;
     width: 14rem;
     height: 14rem;
     border-radius: 50%;
-    background-color: var(--bg-sec);
     overflow: hidden;
-    z-index: 4;
+    z-index: 3;
     background-image: url(./images/P_logo.png);
     background-position: center;
     background-size: cover;
+} 
+
+.placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--bg-sec);
+    overflow: hidden;
+    z-index: 4;
+    width: 100%;
+    height: 100%
 }
 
 /* -- The loading ghost -- */
@@ -71,7 +83,7 @@ body {
     background-color: #000;
     height: 120%;
     width: 60%;
-    z-index: 3;
+    z-index: 4;
     transform: rotate(15deg);
     background: linear-gradient(90deg, var(--bg-sec), var(--bg-ter), var(--bg-sec));
     animation: ghost 1s ease infinite;
@@ -106,7 +118,7 @@ body {
 .progress {
     position: relative;
     display: flex;
-    width: 80%;
+    width: 0;
     height: 100%;
     z-index: 3;
     border-radius: 0.4rem;
@@ -120,7 +132,7 @@ body {
     }
 
     100% {
-        width: 100%;
+        width: 60%;
     }
 }
 
