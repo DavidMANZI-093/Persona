@@ -12,7 +12,3 @@ p_logo.addEventListener('load', () => {
 });
 
 // --- EOS --- //
-
-const progress = document.querySelector('.progress');
-
-console.log(progress);

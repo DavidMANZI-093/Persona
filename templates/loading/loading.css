@@ -106,7 +106,7 @@ body {
     display: flex;
     width: 40rem;
     max-width: 80%;
-    height: 0.4rem;
+    height: 0.32rem;
     border-radius: 0.4rem;
     overflow: hidden;
     z-index: 4;
@@ -144,8 +144,8 @@ body {
 }
 
 .logo-text h1 {
-    font-size: 3rem;
-    letter-spacing: 0.02rem;
+    font-size: 2.8rem;
+    letter-spacing: -0.08rem;
     color: var(--fg-reg);
 }
 
