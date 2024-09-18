@@ -49,6 +49,7 @@ body {
     transform: translateZ(1rem);
     flex-direction: column;
     width: 100%;
+    max-width: 900px;
     height: 100%;
     padding: 2rem;
 }
@@ -81,11 +82,13 @@ body {
 
 .ill-box {
     display: flex;
-    height: 24%;
+    min-height: 24%;
+    height: 40%;
     width: 100%;
     background-image: url(./images/unDraw/undraw_img_1.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .land-text p {
