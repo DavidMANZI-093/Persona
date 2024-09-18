@@ -11,6 +11,7 @@
     --bg-ter: #cecece;
     --bg-null: #00000000;
     --fg-reg: #272727;
+    --fg-dim: #61616175;
     /* --fg-hg: #7925c7; */
     /* --fg-hg: #02750b; */
     --fg-hg: #0077ff;
@@ -52,6 +53,19 @@ body {
     padding: 2rem;
 }
 
+.land-text {
+    position: relative;
+    display: flex;
+    z-index: 3;
+    transform: translateZ(1rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 4rem;
+}
+
 .land-text h1 {
     font-size: 2.8rem;
     color: var(--fg-reg);
@@ -67,7 +81,7 @@ body {
 
 .ill-box {
     display: flex;
-    height: 200%;
+    height: 24%;
     width: 100%;
     background-image: url(./images/unDraw/undraw_img_1.png);
     background-position: center;
@@ -77,4 +91,53 @@ body {
 .land-text p {
     font-size: 1.96rem;
     text-align: justify;
+    padding: 0 1rem;
+}
+
+.action-box {
+    position: relative;
+    z-index: 3;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    justify-content: flex-end;
+}
+
+.actions button {
+    position: relative;
+    display: flex;
+    background-color: var(--fg-hg);
+    border: none;
+    font-size: 1.96rem;
+    border-radius: 0.4rem;
+    color: var(--bg-main);
+    padding: 0.4rem 1.72rem;
+    letter-spacing: 0.1rem;
+}
+
+.pagination {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    height: 0.64rem;
+    width: 0.64rem;
+    border-radius: 50%;
+    background-color: var(--fg-dim);
+}
+
+.page.current {
+    background-color: var(--fg-hg);
 }
